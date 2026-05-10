@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import portraitImg from "@/assets/portrait.jpg";
 import { ArrowRight, Target, Brain, Users, Clock, Sparkles, Download, MessageCircle, Shield, Handshake, BookOpen } from "lucide-react";
