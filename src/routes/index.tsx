@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import portraitImg from "@/assets/portrait.jpg";
 import { ArrowRight, Target, Brain, Users, Clock, Sparkles, Download, MessageCircle, Shield, Handshake, BookOpen } from "lucide-react";
+import { LegalFooter as Footer } from "@/components/LegalLayout";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -224,18 +225,7 @@ function Contact() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-border/60 px-6 py-10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <div className="flex items-center gap-2 font-display">
-          <span className="size-2 rounded-full bg-primary" /> Negotiation Designer · Martin Henze
-        </div>
-        <div>© {new Date().getFullYear()} · Spieltheorie im Einkauf</div>
-      </div>
-    </footer>
-  );
-}
+
 
 function Index() {
   return (

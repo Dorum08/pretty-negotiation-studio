@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight, Mail, Phone, MapPin, MessageCircle, Sparkles, Send, CheckCircle2, Linkedin } from "lucide-react";
+import { LegalFooter as Footer } from "@/components/LegalLayout";
 
 export const Route = createFileRoute("/kontakt")({
   component: KontaktPage,
@@ -97,19 +98,6 @@ function Field({ label, name, type = "text", placeholder, required }: { label: s
         className="w-full rounded-xl bg-background/60 border border-border px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all"
       />
     </div>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-border/60 px-6 py-10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <div className="flex items-center gap-2 font-display">
-          <span className="size-2 rounded-full bg-primary" /> Negotiation Designer · Martin Henze
-        </div>
-        <div>© {new Date().getFullYear()} · Spieltheorie im Einkauf</div>
-      </div>
-    </footer>
   );
 }
 

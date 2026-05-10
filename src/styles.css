@@ -73,6 +73,17 @@
   .bg-radial-glow { background-image: var(--gradient-radial); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .prose-legal { color: var(--color-foreground); line-height: 1.75; }
+  .prose-legal h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+  .prose-legal h2:first-child { margin-top: 0; }
+  .prose-legal h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.5rem; color: var(--color-foreground); }
+  .prose-legal p { color: var(--color-muted-foreground); margin-bottom: 1rem; }
+  .prose-legal ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--color-muted-foreground); }
+  .prose-legal li { margin-bottom: 0.4rem; }
+  .prose-legal a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+  .prose-legal a:hover { color: var(--color-foreground); }
+  .prose-legal strong { color: var(--color-foreground); font-weight: 600; }
+  .prose-legal hr { border: 0; border-top: 1px solid var(--color-border); margin: 2rem 0; }
   .grain::after {
     content: "";
     position: absolute; inset: 0; pointer-events: none;
