@@ -23,32 +23,32 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
-  --font-display: "Jost", system-ui, sans-serif;
-  --font-body: "Jost", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 }
 
 :root {
-  --radius: 1.25rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.01 140);
-  --card: oklch(0.985 0.005 140);
-  --card-foreground: oklch(0.18 0.01 140);
-  --primary: oklch(0.94 0.18 118);
-  --primary-foreground: oklch(0.18 0.01 140);
-  --primary-glow: oklch(0.96 0.2 118);
-  --secondary: oklch(0.92 0.12 165);
-  --secondary-foreground: oklch(0.18 0.01 140);
-  --muted: oklch(0.96 0.005 140);
-  --muted-foreground: oklch(0.45 0.01 140);
-  --accent: oklch(0.92 0.12 165);
-  --accent-foreground: oklch(0.18 0.01 140);
-  --border: oklch(0.9 0.005 140);
-  --ring: oklch(0.94 0.18 118);
+  --radius: 0.75rem;
+  --background: oklch(0.14 0.01 20);
+  --foreground: oklch(0.98 0.005 20);
+  --card: oklch(0.18 0.012 20);
+  --card-foreground: oklch(0.98 0.005 20);
+  --primary: oklch(0.62 0.23 25);
+  --primary-foreground: oklch(0.98 0.005 20);
+  --primary-glow: oklch(0.7 0.25 25);
+  --secondary: oklch(0.22 0.012 20);
+  --secondary-foreground: oklch(0.98 0.005 20);
+  --muted: oklch(0.22 0.012 20);
+  --muted-foreground: oklch(0.7 0.015 20);
+  --accent: oklch(0.62 0.23 25);
+  --accent-foreground: oklch(0.98 0.005 20);
+  --border: oklch(0.28 0.015 20);
+  --ring: oklch(0.62 0.23 25);
 
-  --gradient-primary: linear-gradient(135deg, oklch(0.94 0.18 118), oklch(0.92 0.12 165));
-  --gradient-radial: radial-gradient(circle at 30% 20%, oklch(0.94 0.18 118 / 0.35), transparent 60%);
-  --shadow-glow: 0 20px 70px -15px oklch(0.94 0.18 118 / 0.55);
-  --shadow-elegant: 0 30px 80px -20px oklch(0.18 0.01 140 / 0.18);
+  --gradient-primary: linear-gradient(135deg, oklch(0.62 0.23 25), oklch(0.5 0.2 15));
+  --gradient-radial: radial-gradient(circle at 30% 20%, oklch(0.62 0.23 25 / 0.18), transparent 60%);
+  --shadow-glow: 0 20px 60px -15px oklch(0.62 0.23 25 / 0.45);
+  --shadow-elegant: 0 30px 80px -20px oklch(0 0 0 / 0.6);
 }
 
 @layer base {
@@ -58,14 +58,9 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-body);
-    font-weight: 300;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
-    font-family: var(--font-display);
-    font-weight: 400;
-    letter-spacing: -0.015em;
-  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
 }
 
 @layer utilities {
@@ -81,7 +76,8 @@
   .grain::after {
     content: "";
     position: absolute; inset: 0; pointer-events: none;
-    background-image: radial-gradient(oklch(0 0 0 / 0.03) 1px, transparent 1px);
+    background-image: radial-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px);
     background-size: 3px 3px;
+    mix-blend-mode: overlay;
   }
 }
