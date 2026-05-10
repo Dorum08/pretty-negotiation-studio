@@ -212,9 +212,9 @@ function Contact() {
           Lassen Sie uns über Ihre Herausforderungen sprechen. Direkt, diskret und auf Augenhöhe.
         </p>
         <div className="mt-10 flex flex-wrap gap-4 justify-center">
-          <a href="https://www.negotiation-designer.de/martin-henze-kontaktieren" target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 font-medium text-primary-foreground hover:shadow-glow transition-all">
+          <Link to="/kontakt" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 font-medium text-primary-foreground hover:shadow-glow transition-all">
             Martin Henze kontaktieren <ArrowRight className="size-4" />
-          </a>
+          </Link>
           <a href="mailto:info@negotiation-designer.de" className="inline-flex items-center gap-2 rounded-full border border-border bg-card/40 backdrop-blur px-7 py-4 font-medium hover:bg-card transition-all">
             <BookOpen className="size-4" /> Mehr erfahren
           </a>
