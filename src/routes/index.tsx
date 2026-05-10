@@ -23,7 +23,7 @@ function Nav() {
     { href: "#mission", label: "Mission" },
     { href: "#training", label: "Neg:Designer" },
     { href: "#inhalte", label: "Inhalte" },
-    { href: "#kontakt", label: "Kontakt" },
+    { href: "/kontakt", label: "Kontakt" },
   ];
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/60">
@@ -37,9 +37,9 @@ function Nav() {
             <a key={l.href} href={l.href} className="hover:text-foreground transition-colors">{l.label}</a>
           ))}
         </nav>
-        <a href="#kontakt" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-all hover:shadow-glow">
+        <Link to="/kontakt" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-all hover:shadow-glow">
           Kontakt <ArrowRight className="size-4" />
-        </a>
+        </Link>
       </div>
     </header>
   );
