@@ -225,7 +225,7 @@ function Contact() {
   );
 }
 
-import { LegalFooter as Footer } from "@/components/LegalFooterImport";
+
 
 function Index() {
   return (
