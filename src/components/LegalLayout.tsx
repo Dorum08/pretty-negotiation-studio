@@ -49,7 +49,7 @@ export function LegalFooter() {
             </Link>
           ))}
         </nav>
-        <div>© {new Date().getFullYear()} · Spieltheorie im Einkauf</div>
+        <div>© {new Date().getFullYear()} · Mechanism Design im Einkauf</div>
       </div>
     </footer>
   );
