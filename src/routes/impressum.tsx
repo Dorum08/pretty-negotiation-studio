@@ -42,7 +42,7 @@ function ImpressumPage() {
       <p>Martin Henze (Inhaber)</p>
 
       <h3>Umsatzsteuer-ID</h3>
-      <p>USt-IdNr.: DE 123456789</p>
+      <p>USt-IdNr.: DE419721500</p>
 
       <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
       <p>Martin Henze, Anschrift wie oben.</p>
