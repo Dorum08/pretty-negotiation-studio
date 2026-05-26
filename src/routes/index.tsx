@@ -58,7 +58,7 @@ function Hero() {
             <Sparkles className="size-3.5 text-primary" /> Spieltheorie · Verhandlungsdesign · Einkauf
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]">
-            Verhandeln auf <span className="text-gradient">Königs&shy;niveau.</span>
+            Verhandeln auf <br className="hidden md:block lg:hidden" /> <span className="text-gradient">Königs&shy;niveau.</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl">
             Extrem praxisnahe Trainings zur Spieltheorie im Einkauf. Analytische Tiefe trifft konkrete Umsetzbarkeit – damit Ihr Team Wettbewerb maximal nutzt.
