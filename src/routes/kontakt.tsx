@@ -105,7 +105,7 @@ function KontaktPage() {
   const channels = [
     { icon: Mail, label: "E-Mail", value: "info@negotiation-designer.de", href: "mailto:info@negotiation-designer.de" },
     { icon: Phone, label: "Telefon", value: "Termin vereinbaren", href: "https://www.negotiation-designer.de/martin-henze-kontaktieren" },
-    { icon: Linkedin, label: "LinkedIn", value: "Martin Henze", href: "https://www.linkedin.com/" },
+    { icon: Linkedin, label: "LinkedIn", value: "Martin Henze", href: "https://www.linkedin.com/in/martin-henze-b97053399/" },
     { icon: MapPin, label: "Standort", value: "Deutschland · remote & vor Ort", href: "#" },
   ];
   return (
