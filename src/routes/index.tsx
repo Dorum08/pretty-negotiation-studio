@@ -172,7 +172,7 @@ function Inhalte() {
             <p className="text-sm uppercase tracking-[0.3em] text-primary mb-4">Denkanreize</p>
             <h2 className="text-4xl sm:text-5xl font-bold">Inhalte des Trainings</h2>
           </div>
-          <a href="https://www.negotiation-designer.de/_files/ugd/603901_51e37d8178134719b821fe9e7c448f04.pdf" target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-5 py-3 text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+          <a href="/NegKOMPAKT.pdf" target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-5 py-3 text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-all">
             <Download className="size-4" /> Trainingsinhalte als PDF
           </a>
         </div>
