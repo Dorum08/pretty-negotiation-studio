@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowRight, Mail, Phone, MapPin, MessageCircle, Sparkles, Send, CheckCircle2, Linkedin } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, MessageCircle, Sparkles, Linkedin } from "lucide-react";
 import { LegalFooter as Footer } from "@/components/LegalLayout";
+
 
 export const Route = createFileRoute("/kontakt")({
   component: KontaktPage,
