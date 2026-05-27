@@ -143,18 +143,20 @@ function KontaktPage() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3">
               {channels.map(({ icon: Icon, label, value, href }) => (
                 <a
                   key={label}
                   href={href}
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener"
-                  className="group rounded-2xl border border-border bg-card/60 backdrop-blur p-5 hover:border-primary/60 hover:shadow-glow transition-all"
+                  className="group flex items-center gap-4 rounded-2xl border border-border bg-card/60 backdrop-blur p-5 hover:border-primary/60 hover:shadow-glow transition-all"
                 >
-                  <Icon className="size-5 text-primary mb-3 group-hover:scale-110 transition-transform" />
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
-                  <div className="text-sm font-medium mt-1 truncate">{value}</div>
+                  <Icon className="size-5 text-primary shrink-0 group-hover:scale-110 transition-transform" />
+                  <div className="min-w-0 flex-1">
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
+                    <div className="text-sm font-medium mt-1 break-all">{value}</div>
+                  </div>
                 </a>
               ))}
             </div>
