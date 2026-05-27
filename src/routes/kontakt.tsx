@@ -77,42 +77,37 @@ function KontaktPage() {
       </section>
 
       <section className="px-6 pb-32">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-7">
-            <ContactForm />
+        <div className="max-w-3xl mx-auto space-y-5">
+          <div className="rounded-3xl border border-border bg-card/60 backdrop-blur p-8">
+            <Sparkles className="size-6 text-primary mb-4" />
+            <h2 className="text-2xl font-bold mb-3">Direkter Draht zu Martin Henze</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Keine Callcenter, keine Vorqualifizierung. Sie schreiben – ich antworte. Erstgespräche sind kostenfrei und unverbindlich.
+            </p>
           </div>
-          <aside className="lg:col-span-5 space-y-5">
-            <div className="rounded-3xl border border-border bg-card/60 backdrop-blur p-8">
-              <Sparkles className="size-6 text-primary mb-4" />
-              <h2 className="text-2xl font-bold mb-3">Direkter Draht zu Martin Henze</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Keine Callcenter, keine Vorqualifizierung. Sie schreiben – ich antworte. Erstgespräche sind kostenfrei und unverbindlich.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 gap-3">
-              {channels.map(({ icon: Icon, label, value, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener"
-                  className="group flex items-center gap-4 rounded-2xl border border-border bg-card/60 backdrop-blur p-5 hover:border-primary/60 hover:shadow-glow transition-all"
-                >
-                  <Icon className="size-5 text-primary shrink-0 group-hover:scale-110 transition-transform" />
-                  <div className="min-w-0 flex-1">
-                    <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
-                    <div className="text-sm font-medium mt-1 break-all">{value}</div>
-                  </div>
-                </a>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 gap-3">
+            {channels.map(({ icon: Icon, label, value, href }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel="noopener"
+                className="group flex items-center gap-4 rounded-2xl border border-border bg-card/60 backdrop-blur p-5 hover:border-primary/60 hover:shadow-glow transition-all"
+              >
+                <Icon className="size-5 text-primary shrink-0 group-hover:scale-110 transition-transform" />
+                <div className="min-w-0 flex-1">
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
+                  <div className="text-sm font-medium mt-1 break-all">{value}</div>
+                </div>
+              </a>
+            ))}
+          </div>
 
-            <div className="rounded-3xl border border-primary/30 bg-primary/10 p-6">
-              <p className="text-sm text-muted-foreground">Antwortzeit</p>
-              <p className="text-2xl font-display font-bold text-gradient mt-1">&lt; 24 Stunden</p>
-            </div>
-          </aside>
+          <div className="rounded-3xl border border-primary/30 bg-primary/10 p-6">
+            <p className="text-sm text-muted-foreground">Antwortzeit</p>
+            <p className="text-2xl font-display font-bold text-gradient mt-1">&lt; 24 Stunden</p>
+          </div>
         </div>
       </section>
 
