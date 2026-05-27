@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowRight, Mail, Phone, MapPin, MessageCircle, Sparkles, Send, CheckCircle2, Linkedin } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, MessageCircle, Sparkles, Linkedin } from "lucide-react";
 import { LegalFooter as Footer } from "@/components/LegalLayout";
+
 
 export const Route = createFileRoute("/kontakt")({
   component: KontaktPage,
@@ -47,59 +47,6 @@ function Nav() {
   );
 }
 
-function ContactForm() {
-  const [sent, setSent] = useState(false);
-  return (
-    <form
-      onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-      className="rounded-3xl border border-border bg-card/60 backdrop-blur p-8 sm:p-10 space-y-5"
-    >
-      <div className="grid sm:grid-cols-2 gap-5">
-        <Field label="Name" name="name" placeholder="Ihr Name" required />
-        <Field label="Unternehmen" name="company" placeholder="Firma" />
-      </div>
-      <div className="grid sm:grid-cols-2 gap-5">
-        <Field label="E-Mail" name="email" type="email" placeholder="ihre@email.de" required />
-        <Field label="Telefon" name="phone" placeholder="+49 ..." />
-      </div>
-      <div>
-        <label className="text-sm font-medium mb-2 block">Worum geht's?</label>
-        <textarea
-          required
-          rows={5}
-          placeholder="Skizzieren Sie kurz Ihre Verhandlungssituation..."
-          className="w-full rounded-xl bg-background/60 border border-border px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-        />
-      </div>
-      <button
-        type="submit"
-        disabled={sent}
-        className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-medium text-primary-foreground hover:shadow-glow transition-all disabled:opacity-70"
-      >
-        {sent ? (<><CheckCircle2 className="size-4" /> Nachricht gesendet</>) : (<>Nachricht senden <Send className="size-4" /></>)}
-      </button>
-      <p className="text-xs text-muted-foreground text-center">
-        Vertraulich. Antwort innerhalb von 24 Stunden.
-      </p>
-    </form>
-  );
-}
-
-function Field({ label, name, type = "text", placeholder, required }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
-  return (
-    <div>
-      <label htmlFor={name} className="text-sm font-medium mb-2 block">{label}</label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        required={required}
-        className="w-full rounded-xl bg-background/60 border border-border px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all"
-      />
-    </div>
-  );
-}
 
 function KontaktPage() {
   const channels = [
@@ -130,42 +77,37 @@ function KontaktPage() {
       </section>
 
       <section className="px-6 pb-32">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-7">
-            <ContactForm />
+        <div className="max-w-3xl mx-auto space-y-5">
+          <div className="rounded-3xl border border-border bg-card/60 backdrop-blur p-8">
+            <Sparkles className="size-6 text-primary mb-4" />
+            <h2 className="text-2xl font-bold mb-3">Direkter Draht zu Martin Henze</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Keine Callcenter, keine Vorqualifizierung. Sie schreiben – ich antworte. Erstgespräche sind kostenfrei und unverbindlich.
+            </p>
           </div>
-          <aside className="lg:col-span-5 space-y-5">
-            <div className="rounded-3xl border border-border bg-card/60 backdrop-blur p-8">
-              <Sparkles className="size-6 text-primary mb-4" />
-              <h2 className="text-2xl font-bold mb-3">Direkter Draht zu Martin Henze</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Keine Callcenter, keine Vorqualifizierung. Sie schreiben – ich antworte. Erstgespräche sind kostenfrei und unverbindlich.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 gap-3">
-              {channels.map(({ icon: Icon, label, value, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener"
-                  className="group flex items-center gap-4 rounded-2xl border border-border bg-card/60 backdrop-blur p-5 hover:border-primary/60 hover:shadow-glow transition-all"
-                >
-                  <Icon className="size-5 text-primary shrink-0 group-hover:scale-110 transition-transform" />
-                  <div className="min-w-0 flex-1">
-                    <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
-                    <div className="text-sm font-medium mt-1 break-all">{value}</div>
-                  </div>
-                </a>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 gap-3">
+            {channels.map(({ icon: Icon, label, value, href }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel="noopener"
+                className="group flex items-center gap-4 rounded-2xl border border-border bg-card/60 backdrop-blur p-5 hover:border-primary/60 hover:shadow-glow transition-all"
+              >
+                <Icon className="size-5 text-primary shrink-0 group-hover:scale-110 transition-transform" />
+                <div className="min-w-0 flex-1">
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
+                  <div className="text-sm font-medium mt-1 break-all">{value}</div>
+                </div>
+              </a>
+            ))}
+          </div>
 
-            <div className="rounded-3xl border border-primary/30 bg-primary/10 p-6">
-              <p className="text-sm text-muted-foreground">Antwortzeit</p>
-              <p className="text-2xl font-display font-bold text-gradient mt-1">&lt; 24 Stunden</p>
-            </div>
-          </aside>
+          <div className="rounded-3xl border border-primary/30 bg-primary/10 p-6">
+            <p className="text-sm text-muted-foreground">Antwortzeit</p>
+            <p className="text-2xl font-display font-bold text-gradient mt-1">&lt; 24 Stunden</p>
+          </div>
         </div>
       </section>
 
