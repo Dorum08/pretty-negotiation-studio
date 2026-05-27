@@ -47,59 +47,6 @@ function Nav() {
   );
 }
 
-function ContactForm() {
-  const [sent, setSent] = useState(false);
-  return (
-    <form
-      onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-      className="rounded-3xl border border-border bg-card/60 backdrop-blur p-8 sm:p-10 space-y-5"
-    >
-      <div className="grid sm:grid-cols-2 gap-5">
-        <Field label="Name" name="name" placeholder="Ihr Name" required />
-        <Field label="Unternehmen" name="company" placeholder="Firma" />
-      </div>
-      <div className="grid sm:grid-cols-2 gap-5">
-        <Field label="E-Mail" name="email" type="email" placeholder="ihre@email.de" required />
-        <Field label="Telefon" name="phone" placeholder="+49 ..." />
-      </div>
-      <div>
-        <label className="text-sm font-medium mb-2 block">Worum geht's?</label>
-        <textarea
-          required
-          rows={5}
-          placeholder="Skizzieren Sie kurz Ihre Verhandlungssituation..."
-          className="w-full rounded-xl bg-background/60 border border-border px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-        />
-      </div>
-      <button
-        type="submit"
-        disabled={sent}
-        className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-medium text-primary-foreground hover:shadow-glow transition-all disabled:opacity-70"
-      >
-        {sent ? (<><CheckCircle2 className="size-4" /> Nachricht gesendet</>) : (<>Nachricht senden <Send className="size-4" /></>)}
-      </button>
-      <p className="text-xs text-muted-foreground text-center">
-        Vertraulich. Antwort innerhalb von 24 Stunden.
-      </p>
-    </form>
-  );
-}
-
-function Field({ label, name, type = "text", placeholder, required }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
-  return (
-    <div>
-      <label htmlFor={name} className="text-sm font-medium mb-2 block">{label}</label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        required={required}
-        className="w-full rounded-xl bg-background/60 border border-border px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all"
-      />
-    </div>
-  );
-}
 
 function KontaktPage() {
   const channels = [
