@@ -76,7 +76,7 @@ function KontaktPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-32">
+      <section className="px-6 pt-12 pb-32">
         <div className="max-w-3xl mx-auto space-y-5">
           <div className="rounded-3xl border border-border bg-card/60 backdrop-blur p-8">
             <Sparkles className="size-6 text-primary mb-4" />
