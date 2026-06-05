@@ -98,6 +98,7 @@ function Mission() {
           <div className="lg:col-span-5 relative">
             <div className="absolute -inset-6 bg-radial-glow blur-2xl" />
             <img src={portraitImg} alt="Martin Henze, Negotiation Designer" loading="lazy" width={1024} height={1280} className="relative rounded-2xl shadow-elegant w-full" />
+            <p className="relative mt-4 text-center text-2xl font-bold text-red-600">Martin Henze</p>
           </div>
           <div className="lg:col-span-7">
             <p className="text-sm uppercase tracking-[0.3em] text-primary mb-4">Mission & Mindset</p>
