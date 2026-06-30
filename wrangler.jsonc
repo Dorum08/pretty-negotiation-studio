@@ -3,5 +3,18 @@
   "name": "tanstack-start-app",
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "src/server.ts",
+  // After `npm run build` (vite build) erzeugt Nitro das Worker-Bundle unter dist/server
+  // und die statischen Assets unter dist/client. Diese Pfade werden von `npx wrangler deploy` genutzt.
+  "main": "./dist/server/index.mjs",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist/client"
+  },
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": ["**/*.mjs", "**/*.js"]
+    }
+  ]
 }
